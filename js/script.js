@@ -3,7 +3,6 @@ Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
 
 const studentList = document.querySelector('.student-list');
   const student = document.querySelectorAll(".student-item");
@@ -65,7 +64,7 @@ const studentList = document.querySelector('.student-list');
   /*** adding functionality***/
   const appendPageLinks = function (list) {
   let pageCount = Math.ceil(student.length / 10);
-  
+
   for (var i = 0; i < pageCount; i++) {
      let pageLi = document.createElement('li');
      pageUl.appendChild(pageLi);
