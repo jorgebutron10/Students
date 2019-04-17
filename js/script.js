@@ -14,39 +14,6 @@ const studentList = document.querySelector('.student-list');
      pagediv.appendChild(pageUl);
   const pageHeader = document.querySelector(".page-header");
 
-  //search bar
-  const searchDiv = document.createElement("div");
-     searchDiv.className = "student-search";
-     pageHeader.appendChild(searchDiv);
-  const searchInput = document.createElement("input");
-     searchInput.setAttribute("placeholder", "Search for students...");
-     searchDiv.appendChild(searchInput);
-  const searchBtn = document.createElement("button");
-     searchBtn.textContent = "Search";
-     searchDiv.appendChild(searchBtn);
-     // add keyup on the search input
-     searchInput.onkeyup = function() {
-        let filter = searchInput.value.toLowerCase();
-        for (var i = 0; i < student.length; i++) {
-           if (student[i].innerHTML.indexOf(filter) > -1) {
-              student[i].style.display = "";
-           } else {
-              student[i].style.display = "none";
-           }
-        }
-     }
-
-  //functionality for search button
-  searchBtn.addEventListener("click", function(){
-     let filter = searchInput.value.toLowerCase();
-     for (var i = 0; i < student.length; i++) {
-        if (student[i].innerHTML.indexOf(filter) > -1) {
-           student[i].style.display = "";
-        } else {
-           student[i].style.display = "none";
-        }
-     }
-  })
 
   /***show first 10 ***/
   const showPage = function(list, page) {
